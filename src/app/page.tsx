@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import CardPokemon from "@/components/CardPokemon";
+import EvolvePokemon from "@/components/EvolvePokemon";
 
 export default function Home() {
   const [attention, setAttention] = useState("animate__bounce");
@@ -61,6 +62,7 @@ export default function Home() {
       </div>
 
       <CardPokemon/>
+      <EvolvePokemon/>
       </div>
     </div>
   );

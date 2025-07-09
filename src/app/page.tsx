@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import CardPokemon from "@/components/CardPokemon";
+import EvolvePokemon from "@/components/EvolvePokemon";
 
 export default function Home() {
   const [attention, setAttention] = useState("animate__bounce");
@@ -15,6 +17,7 @@ export default function Home() {
   return (
     <div className="flex items-center justify-center flex-col">
       <h1 className="animate__animated animate__bounce text-2xl font-bold mt-8">Vamos usar Animate.css!</h1>
+      <div className="flex items-center flex-row gap-10">
       <div className="flex items-center justify-center h-full gap-8 flex-wrap">
         <div className="flex items-center justify-center flex-col mt-4 mb-4 border-stone-300 shadow-md w-[400px] p-8 pb-12 border-2">
           <Image
@@ -56,6 +59,10 @@ export default function Home() {
           </select>
           <button className="bg-black text-amber-50 w-full mt-8 cursor-pointer" onClick={handleFinish}>GUARDAR POKÉMON</button>
         </div>
+      </div>
+
+      <CardPokemon/>
+      <EvolvePokemon/>
       </div>
     </div>
   );
